@@ -1,0 +1,3 @@
+plan_filename: /home/borong/catkin_ws/src/tensorrt_faster_rcnn_ros/data/VGG16_faster_rcnn_final.plan
+nms_threshold: 0.3
+score_threshold: 0.8

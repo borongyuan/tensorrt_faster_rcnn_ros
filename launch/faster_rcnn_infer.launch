@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<launch>
+  <rosparam command="load" file="$(find tensorrt_faster_rcnn_ros)/cfg/VGG16_faster_rcnn.yaml" ns="faster_rcnn_infer"/>
+  <node pkg="tensorrt_faster_rcnn_ros" name="faster_rcnn_infer" type="trt_node" output="screen">
+    <remap from="/faster_rcnn_infer/input_topic" to="/camera/color/image_raw"/>
+    <remap from="/faster_rcnn_infer/output_topic" to="/faster_rcnn_infer/bounding_boxes"/>
+  </node>
+</launch>
